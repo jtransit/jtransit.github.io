@@ -2,14 +2,20 @@ $(document).ready(function(){
     var scroll_pos = 0;
     $(document).scroll(function() { 
         scroll_pos = $(document).scrollTop();
-        var div = $('#features')[0].scrollHeight;
-        var parallax = $('#features').height() / 1.75;
-        if(scroll_pos > (div + parallax)) {
-            $("#features").css('background-color', 'grey');
-            $('#feature-title').text('Night Mode Available');
+        var masthead = $('#masthead').height();
+        var window = $('#parallax-window').height();
+        if(scroll_pos > (masthead + window)) {
+            $("#features").css('background-color', '#17263c');
+            $("#features").css('color', 'white');
+            $('#feature-title').text('Introducing Night Mode');
+            $('#pic-2').addClass('hidden');
+            $('#pic-1').removeClass('hidden');
         } else {
             $("#features").css('background-color', 'white');
-            $('#feature-title').text('Features Here');
+            $("#features").css('color', 'black');
+            $('#feature-title').text('New Features are Available');
+            $('#pic-1').addClass('hidden');
+            $('#pic-2').removeClass('hidden');
         }
     });
 });

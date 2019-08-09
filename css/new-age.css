@@ -442,3 +442,15 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   /* min-height: 400px; */
   background: transparent;
 }
+
+#features {
+  position: -webkit-sticky;
+  position: sticky !important;
+  top: 0;
+  overflow: hidden;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
