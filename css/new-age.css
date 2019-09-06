@@ -452,5 +452,29 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+.feature-item :hover {
+  box-shadow: #eee;
+}
+
+#toggle-btn {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 100px;
+}
+
+#toggle-btn:hover {
+  background-color: #555;
 }
