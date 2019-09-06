@@ -49,6 +49,7 @@ $(document).ready(function(){
 
     function night_mode() {
         theme = "night";
+        $('#toggle-btn').css({"background-color": "white", "color": "black"});
         $("#features").css('background-color', '#17263c');
         $("#features").css('color', 'white');
         $("#features").css('transition', 'background-color 0.5s');
@@ -58,6 +59,7 @@ $(document).ready(function(){
 
     function light_mode() {
         theme = "light";
+        $('#toggle-btn').css({"background-color": "black", "color": "white"});
         $("#features").css('background-color', 'white');
         $("#features").css('color', 'black');
         $("#features").css('transition', 'background-color 0.3s');
