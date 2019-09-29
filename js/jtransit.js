@@ -13,26 +13,45 @@ $(document).ready(function(){
                 $('#toggle-btn').removeClass('hidden');
             }
         }
-        
     });
 
-    $("#item-1").hover(function() {
-        $( '#pic-1' ).attr("src","img/light-mode.jpg");
+    $("#item-1").hover(
+        function() {
+            if(theme === "light") {
+                $( '#pic-1' ).attr("src","img/light-mode.jpg");
+            } else {
+                $( '#pic-1' ).attr("src","img/night-mode.jpg");
+            }
         }, function() {
     });
 
-    $("#item-2").hover(function() {
-        $( '#pic-1' ).attr("src","img/route-suggestion.jpg");
-        }, function() {
+    $("#item-2").hover(
+        function() {
+            if(theme === "light") {
+                $( '#pic-1' ).attr("src","img/favorites-light.jpg");
+            } else {
+                $( '#pic-1' ).attr("src", "img/favorites-night.jpg");
+            }
+        },  function() {
     });
     
-    $("#item-3").hover(function() {
-        $( '#pic-1' ).attr("src","img/fare-calculation.jpg");
+    $("#item-3").hover(
+        function() {
+            if(theme === "light") {
+                $( '#pic-1' ).attr("src","img/fare-calculation.jpg");
+            } else {
+                $( '#pic-1' ).attr("src","img/fare-calculation-night.jpg");
+            }
         }, function() {
     });
 
-    $("#item-4").hover(function() {
-        $( '#pic-1' ).attr("src","img/offline-routes.jpg");
+    $("#item-4").hover(
+        function() {
+            if(theme === "light") {
+                $( '#pic-1' ).attr("src","img/offline-routes.jpg");
+            } else {
+                $( '#pic-1' ).attr("src","img/offline-routes-night.jpg");
+            }
         }, function() {
     });
 
