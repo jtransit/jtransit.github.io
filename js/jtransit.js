@@ -75,6 +75,7 @@ $(document).ready(function(){
         $('#feature-title').text('Introducing Night Mode');
         $( '#pic-1' ).attr("src","img/night-mode.jpg");
         $('header.masthead').css('background', '#17263c');
+        $('header.masthead').css('transition', 'background-color 0.5s');
         $('#mainNav .navbar-brand').css('color', '#fff !important');
     }
 
@@ -87,6 +88,7 @@ $(document).ready(function(){
         $('#feature-title').text('New Features are Available');
         $( '#pic-1' ).attr("src","img/light-mode.jpg");
         $('header.masthead').css('background', '#ff7f57');
+        $('header.masthead').css('transition', 'background-color 0.5s');
         $('#mainNav .navbar-brand').css('color', '#17263c !important');
     }
 });
