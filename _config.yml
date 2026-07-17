@@ -2,6 +2,6 @@ plugins:
   - jekyll-seo-tag
 
 title: JTransit - Cebu Jeepney Navigation
-description: Must have app for commuters in Cebu. JTransit provides one or more ways to navigate the city via public transportation. Suggests Jeepney routes and calculates fare.
+description: Plan jeepney trips across Cebu — which jeep to take, where to board and get off, and what the fare is. Community-mapped routes, free on the web.
 url: https://jtransit.github.io/
 author: Boscaf Software

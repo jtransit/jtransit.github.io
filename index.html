@@ -1,231 +1,130 @@
 ---
-title: JTransit - Cebu Jeepney Navigation
+title: JTransit — Cebu Jeepney Navigation
 ---
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147059349-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-147059349-1');
-  </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="js/parallax.min.js"></script>
-  <script src="js/jtransit.js"></script>
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
-  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-
-  <!-- Plugin CSS -->
-  <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
-
-  <!-- Custom styles for this template -->
-  <link href="css/new-age.css" rel="stylesheet">
-  <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   {% seo %}
 </head>
 
-<body id="page-top">
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">JTransit</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#download">Download</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#features">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <button id="toggle-btn" class="hidden"><i class="fa fa-sun-o" aria-hidden="true"></i></button>
-  <header class="masthead" id="masthead">
-    <div class="container h-100">
-      <div class="row h-100">
-        <div class="col-lg-7 my-auto">
-          <div class="header-content mx-auto">
-            <h1 class="mb-5">JTransit - Cebu Jeepney Navigation</h1>
-            <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Use Now</a>
-          </div>
-        </div>
-        <div class="col-lg-5 my-auto">
-          <div class="device-container">
-            <div class="device-mockup iphone6_plus portrait white">
-              <div class="device">
-                <div class="screen">
-                  <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                  <img src="img/jtransit-screen.png" class="img-fluid" alt="" title="jtransit screen">
-                </div>
-                <div class="button">
-                  <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<body>
+  <header class="container topbar">
+    <a class="brand" href="/">JTransit</a>
+    <a class="btn" href="https://jtransit.vercel.app">Open the app</a>
   </header>
-  <div class="parallax-window" data-parallax="scroll" data-image-src="img/cebu-maps.PNG" id="parallax-window">
-    <section class="download text-center" id="download">
+
+  <main>
+    <section class="container hero">
+      <div class="hero-copy">
+        <h1>Get around Cebu by jeepney.</h1>
+        <p class="lede">Plan trips across 60+ routes — where to board, where to get off, and what it costs.</p>
+        <a class="btn" href="https://jtransit.vercel.app">Plan a trip</a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 440 320" focusable="false">
+          <path d="M30 270 C 120 230, 110 120, 220 110 S 400 80, 420 30" fill="none" stroke="#ff8a65" stroke-width="10" stroke-linecap="round"/>
+          <path class="walk-line" d="M20 80 C 100 110, 240 140, 300 220 S 390 275, 424 258" fill="none" stroke="#07a8bb" stroke-width="7" stroke-linecap="round"/>
+          <path d="M60 20 C 140 60, 180 180, 120 285" fill="none" stroke="#fbcd47" stroke-width="10" stroke-linecap="round"/>
+          <circle class="dot-origin" cx="30" cy="270" r="11"/>
+          <circle class="dot-dest" cx="420" cy="30" r="11"/>
+          <g transform="translate(180, 88)">
+            <rect width="64" height="30" rx="15" fill="#ff8a65" stroke="#ffffff" stroke-width="3"/>
+            <text x="32" y="21" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="15" font-weight="700" fill="#2a130a">04L</text>
+          </g>
+          <g transform="translate(96, 170)">
+            <rect width="64" height="30" rx="15" fill="#fbcd47" stroke="#ffffff" stroke-width="3"/>
+            <text x="32" y="21" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="15" font-weight="700" fill="#2a130a">13C</text>
+          </g>
+          <g transform="translate(285, 190)">
+            <rect width="70" height="30" rx="15" fill="#07a8bb" stroke="#ffffff" stroke-width="3"/>
+            <text x="35" y="21" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="15" font-weight="700" fill="#ffffff">Walk</text>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="features">
       <div class="container">
-        <div class="row">
-          <div class="col-md-8 mx-auto">
-            <h2 class="section-heading">Must have app for commuters in Cebu</h2>
-            <p>Our app is available on Google Play and the web. Choose an option to get started!</p>
-            <div class="badges">
-              <a class="badge-link" href="https://play.google.com/store/apps/details?id=com.boscafsoftware.jtransit&hl=en_US"><img src="img/google-play-badge.svg" alt="google play button" title="google play button"></a>
-              <a class="badge-link" href="https://jtransit.github.io/app"><img src="img/web-app-badge.svg" alt="jtransit web button" title="jtransit web button"></a>
+        <h2>One job: get you on the right jeep.</h2>
+
+        <div class="feature">
+          <div class="feature-copy">
+            <h3>Plan a trip</h3>
+            <p>Tell it where you're going and it finds the fastest door-to-door itinerary — which jeep to catch, where to board, where to get off — with ride, wait and walk time broken down and the fare up front.</p>
+          </div>
+          <div class="feature-vignette" aria-hidden="true">
+            <div class="vignette-card">
+              <div class="card-top">
+                <span class="time">32 min</span>
+                <span class="pill pill--label">FASTEST</span>
+              </div>
+              <div class="legs">
+                <span class="pill pill--teal">Walk</span>
+                <span class="sep">›</span>
+                <span class="pill pill--coral">04L</span>
+                <span class="sep">›</span>
+                <span class="pill pill--pink">17B</span>
+              </div>
+              <p class="card-meta">4 min walk · 5 min wait · 23 min ride — ₱26</p>
             </div>
-            <p class="section-heading">You may also donate using PayPal</p>
-            <div class="badges">
-              <a class="badge-link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=S9TJT5X5XN25N&source=url"><img src="img/paypal-donate.gif"></a>
+          </div>
+        </div>
+
+        <div class="feature feature--flip">
+          <div class="feature-copy">
+            <h3>Every route, mapped</h3>
+            <p>Browse 60+ jeepney routes end to end, inbound and outbound, drawn on the map so you can see exactly where each one runs.</p>
+          </div>
+          <div class="feature-vignette" aria-hidden="true">
+            <div class="doodle">
+              <svg viewBox="0 0 380 220" focusable="false">
+                <path d="M25 180 C 110 155, 130 60, 240 70 S 340 105, 355 45" fill="none" stroke="#5ed663" stroke-width="9" stroke-linecap="round"/>
+                <path d="M25 180 C 120 175, 160 90, 250 92 S 345 120, 355 45" fill="none" stroke="#5ed663" stroke-width="9" stroke-linecap="round" opacity="0.35"/>
+                <circle class="dot-origin" cx="25" cy="180" r="9"/>
+                <circle class="dot-dest" cx="355" cy="45" r="9"/>
+                <g transform="translate(168, 48)">
+                  <rect width="56" height="28" rx="14" fill="#5ed663" stroke="#ffffff" stroke-width="3"/>
+                  <text x="28" y="20" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="14" font-weight="700" fill="#2a130a">12I</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-copy">
+            <h3>Built by riders</h3>
+            <p>The route map is community-sourced. Propose a route we're missing, fix one that's wrong, and vote on what's accurate. <a href="https://jtransit.vercel.app/crowdsource/proposals">Suggest a route</a></p>
+          </div>
+          <div class="feature-vignette" aria-hidden="true">
+            <div class="vignette-card">
+              <div class="card-top">
+                <span class="pill pill--purple">11A</span>
+                <span class="votes"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 2l5 8H1z" fill="currentColor"/></svg>12</span>
+              </div>
+              <p class="vignette-title">Lahug – Carbon via Escario</p>
+              <p class="card-meta">Proposed by Maria · pending review</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  </div>
+  </main>
 
-  <section class="features" id="features">
+  <footer class="site-footer">
     <div class="container">
-      <div class="section-heading text-center">
-        <h2 id='feature-title'>Jeepney navigation has never been this easy</h2>
-        <!-- <p class="text-muted">Check out what you can do with this app theme!</p> -->
-        <hr>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 my-auto">
-          <div class="device-container">
-            <div class="device-mockup iphone6_plus portrait white">
-              <div class="device">
-                <div class="screen">
-                  <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                  <img id="pic-1" src="img/light-mode.jpg" class="img-fluid" alt="jtransit light mode" title="jtransit light mode">
-                  <!-- <img id="pic-2" src="img/light-mode.jpg" class="img-fluid"> -->
-                </div>
-                <div class="button">
-                  <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-8 my-auto">
-          <div class="container-fluid">
-            <div class="row">
-              <div id="item-1" class="col-lg-6">
-                <div class="feature-item">
-                  <i class="icon-location-pin text-primary"></i>
-                  <h3>Jeepney Directions</h3>
-                  <p class="text-muted">Over 60 Jeepney routes. Suggests the Jeepney route for you to take</p>
-                </div>
-              </div>
-              <div id="item-2" class="col-lg-6">
-                <div class="feature-item">
-                  <i class="icon-star
-                  text-primary"></i>
-                  <h3>Favorites</h3>
-                  <p class="text-muted">Save your favorite destinations and access it offline</p>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div id="item-3" class="col-lg-6">
-                <div class="feature-item">
-                  <i class="icon-credit-card text-primary"></i>
-                  <h3>Fare Calculation</h3>
-                  <p class="text-muted">Calculates the fare for the entire trip. Added fare calculation for Student/PWD/Senior</p>
-                </div>
-              </div>
-              <div id="item-4" class="col-lg-6">
-                <div class="feature-item">
-                  <i class="icon-plane text-primary"></i>
-                  <h3>Offline Routes</h3>
-                  <p class="text-muted">Get the inbound and outbound Jeepney directions</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact bg-primary" id="contact">
-    <div class="container">
-      <h2>
-        Contact us
-        <p class="text-muted">Connect with us on Facebook or Google</p>
-      </h2>
-      
-      <ul class="list-inline list-social">
-        <li class="list-inline-item social-facebook">
-          <a href="https://www.facebook.com/jtransit/">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </li>
-        <li class="list-inline-item social-google-plus">
-          <a href="mailto:boscafsoftware@gmail.com">
-            <i class="fab fa-google"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; JTransit 2019. All Rights Reserved.</p>
-      <ul class="list-inline">
-        <li class="list-inline-item">
-          <a href="privacy.html">Privacy</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="terms.html">Terms</a>
-        </li>
-      </ul>
+      <p>© JTransit 2026 · Made in Cebu</p>
     </div>
   </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="js/new-age.min.js"></script>
-
 </body>
 
 </html>
