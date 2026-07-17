@@ -241,9 +241,9 @@ body {
   color: #2a130a;
 }
 
-.pill--coral { background: #ff8a65; }
+.pill--coral { background: var(--coral); }
 .pill--pink { background: #ec778c; }
-.pill--teal { background: #07a8bb; color: #ffffff; }
+.pill--teal { background: #07a8bb; color: #2a130a; }
 .pill--purple { background: #d48be2; }
 
 .pill--label {
