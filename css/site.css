@@ -1,0 +1,307 @@
+/* JTransit landing — tokens from frontend-next DESIGN.md ("The Cebu Curbside").
+   Light muted is #7d6c62 (Stone Muted darkened to clear 4.5:1 on cream/white). */
+
+:root {
+  --bg: #fffaf6;        /* Cream Pavement */
+  --surface: #ffffff;   /* Paper Surface */
+  --linen: #fdf2ec;     /* Warm Linen */
+  --hairline: #f1e4db;  /* Tan Hairline */
+  --ink: #2a201b;       /* Roasted Bean */
+  --muted: #7d6c62;
+  --coral: #ff8a65;     /* Sunset Coral */
+  --coral-deep: #f15a2b;
+  --on-coral: #2a130a;  /* Espresso On-Coral */
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151010;       /* Night Bean */
+    --surface: #211a16;  /* Night Surface */
+    --linen: #2b211b;    /* Night Linen */
+    --hairline: #3a2e26; /* Night Hairline */
+    --ink: #f6efea;      /* Bone */
+    --muted: #a89a8f;    /* Smoke */
+    --coral-deep: #ff7043;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  font-feature-settings: "ss01";
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Top bar ---------- */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  background: var(--coral);
+  color: var(--on-coral);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+}
+
+.btn:hover { background: var(--coral-deep); }
+
+/* ---------- Hero ---------- */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 48px 0 72px;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.25rem, 5.5vw, 3.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.lede {
+  color: var(--muted);
+  font-size: 1.0625rem;
+  max-width: 44ch;
+  margin: 20px 0 28px;
+}
+
+.hero-art svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.dot-origin { fill: var(--ink); }
+.dot-dest { fill: var(--coral-deep); }
+
+.walk-line {
+  stroke-dasharray: 1 10;
+  animation: walk-flow 1.6s linear infinite;
+}
+
+@keyframes walk-flow {
+  to { stroke-dashoffset: -22; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .walk-line { animation: none; }
+}
+
+/* ---------- Features ---------- */
+
+.features { padding: 8px 0 56px; }
+
+.features h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 0 0 24px;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 32px 0;
+}
+
+.feature--flip .feature-vignette { order: -1; }
+
+.feature h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.feature-copy p {
+  color: var(--muted);
+  max-width: 48ch;
+  margin: 10px 0 0;
+}
+
+.feature-copy a {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.feature-vignette {
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------- Vignettes ---------- */
+
+.vignette-card {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 16px;
+  padding: 16px;
+  width: 100%;
+  max-width: 340px;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.time {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.legs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.sep { color: var(--muted); }
+
+.card-meta {
+  color: var(--muted);
+  font-size: 0.8125rem;
+  margin: 12px 0 0;
+}
+
+.vignette-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 12px 0 0;
+}
+
+.pill {
+  display: inline-block;
+  border-radius: 9999px;
+  padding: 4px 10px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: #2a130a;
+}
+
+.pill--coral { background: #ff8a65; }
+.pill--pink { background: #ec778c; }
+.pill--teal { background: #07a8bb; color: #ffffff; }
+.pill--purple { background: #d48be2; }
+
+.pill--label {
+  background: var(--coral);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+}
+
+.doodle {
+  background: var(--linen);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.doodle svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.votes {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.8125rem;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--hairline);
+  margin-top: 24px;
+  padding: 28px 0 40px;
+}
+
+.site-footer p {
+  color: var(--muted);
+  font-size: 0.8125rem;
+  margin: 0;
+}
+
+/* ---------- Narrow layout ---------- */
+
+@media (max-width: 720px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 32px 0 48px;
+  }
+
+  .feature {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 0;
+  }
+
+  .feature--flip .feature-vignette { order: 0; }
+}
