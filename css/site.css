@@ -291,6 +291,38 @@ body {
   margin: 0;
 }
 
+.site-footer a {
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.site-footer a:hover { color: var(--ink); }
+
+/* ---------- Not found ---------- */
+
+/* Served by GitHub Pages for any unmatched path, including the retired
+   /privacy.html and /terms.html. Keeps the topbar so there's always a way
+   back rather than dropping visitors on GitHub's generic 404. */
+.notfound {
+  padding: 72px 0 96px;
+  max-width: 30rem;
+}
+
+.notfound h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.notfound p {
+  color: var(--muted);
+  font-size: 1rem;
+  margin: 12px 0 28px;
+}
+
 /* ---------- Narrow layout ---------- */
 
 @media (max-width: 720px) {
